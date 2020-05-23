@@ -1,2 +1,8 @@
-<h1>Blogs#new</h1>
-<p>Find me in app/views/blogs/new.html.erb</p>
+<%= form_with(model: @blog) do |form| %>
+  <div class="blog_content">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<%= link_to 'ブログ一覧画面に戻る', blogs_path %>
